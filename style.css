@@ -208,4 +208,19 @@ a {
   .contact.active {
     display: flex;
   }
+
+  .second-section-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .second-section-wrapper .list {
+    border: none;
+    padding-left: 0;
+    padding-top: 0.5rem;
+  }
+
+  .third-section-wrapper {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
 }

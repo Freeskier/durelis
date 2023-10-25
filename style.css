@@ -29,7 +29,6 @@ body {
 
   color: #fcfcfc;
   font-family: "Montserrat", Helvetica;
-  background-color: transparent;
 }
 
 section {
@@ -40,16 +39,19 @@ section {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  background: #ffffffb5;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 ul {
   padding-left: 2rem;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 p {
-  max-width: 1000px;
+  max-width: 1200px;
   text-align: justify;
   line-height: 1.5;
 }
@@ -73,6 +75,24 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: #fcfcfc;
+}
+
+.body-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.body-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  max-height: 100vh;
+  background-image: url("/full-bg.jpeg");
+  filter: brightness(0.5) blur(5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  scale: 1.1;
 }
 
 .main-section {
@@ -104,7 +124,6 @@ a {
   filter: brightness(50%);
   background-size: cover;
   background-position: center;
-  z-index: -1;
 }
 
 .main-section h1 {
@@ -112,6 +131,7 @@ a {
   text-align: center;
   color: white;
   margin-top: 8rem;
+  position: relative;
 }
 
 .main-section a {
@@ -121,6 +141,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+  padding-bottom: 0;
   font-weight: 600;
   position: absolute;
   top: 60%;
@@ -152,7 +173,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .second-section ul {
@@ -176,8 +197,7 @@ a {
 }
 
 .logistic-section tr th {
-  color: #fe8011 !important;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .logistic-section h2 {
@@ -193,7 +213,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   justify-items: center;
   align-items: center;
@@ -239,6 +259,7 @@ a {
 
 .fourth-section img {
   max-width: 300px;
+  flex-shrink: 0;
 }
 
 .fourth-section .summary {
@@ -249,6 +270,7 @@ a {
   margin: 0 auto;
   grid-column: 1 / 3;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .contact {
@@ -256,9 +278,8 @@ a {
   right: 0;
   top: 50%;
   translate: 0 -50%;
-  border: 3px solid var(--secondary);
-  background-color: #0f0f0fb6;
-  padding: 1rem;
+  background-color: #fe8011c4;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -285,6 +306,7 @@ a {
   padding: 1rem;
   background-color: #0f0f0fb6;
   cursor: pointer;
+  z-index: 12;
 }
 
 .logo-main {
@@ -292,32 +314,36 @@ a {
   width: 80%;
   align-self: start;
   margin-block: 3rem;
+  margin-inline: auto;
   min-width: 300px;
 }
 
 .fifth-section {
-  padding-block: 2rem;
   flex-direction: row;
   gap: 5rem;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .fifth-section p {
-  max-width: 40ch;
   color: #0f0f0f;
   font-weight: 600;
   min-width: 200px;
+  flex: 1;
+  padding-right: 3rem;
 }
 
 .fifth-section a {
   color: #0f0f0f;
   font-weight: 800;
   text-decoration: underline;
+  font-size: 2rem;
 }
 
 .fifth-section img {
   aspect-ratio: 1;
-  height: 400px;
+  height: 500px;
 }
 
 @media (max-width: 1000px) {
@@ -388,5 +414,17 @@ a {
 
   .fourth-section .questions-img {
     display: none;
+  }
+
+  .third-section-wrapper .second-p {
+    grid-row: 4;
+  }
+
+  .fifth-section {
+    flex-wrap: wrap-reverse;
+  }
+
+  .fifth-section p {
+    padding: 2rem;
   }
 }

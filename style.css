@@ -87,7 +87,7 @@ a {
   position: fixed;
   inset: 0;
   max-height: 100vh;
-  background-image: url("/full-bg.jpeg");
+  background-image: url("/full-bg.webp");
   filter: brightness(0.5) blur(5px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ a {
       rgba(34, 78, 158, 0.596),
       rgba(34, 78, 158, 0.596)
     ),
-    url("/main-bg.jpeg");
+    url("/main-bg.webp");
   filter: brightness(50%);
   background-size: cover;
   background-position: center;
@@ -239,6 +239,12 @@ a {
   gap: 1rem;
 }
 
+.question li img {
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 80px;
+}
+
 .question {
   display: flex;
   flex-direction: column;
@@ -301,10 +307,10 @@ a {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  border: 2px solid var(--secondary);
+  border: 2px solid #a75814;
   border-radius: 50%;
   padding: 1rem;
-  background-color: #0f0f0fb6;
+  background-color: #fe8011ab;
   cursor: pointer;
   z-index: 12;
 }

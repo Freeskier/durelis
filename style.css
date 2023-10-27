@@ -242,7 +242,7 @@ a {
 .questions li img {
   flex-shrink: 0;
   flex-grow: 0;
-  max-width: 80px;
+  width: 70px;
 }
 
 .question {

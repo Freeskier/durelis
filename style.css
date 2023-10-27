@@ -239,7 +239,7 @@ a {
   gap: 1rem;
 }
 
-.question li img {
+.questions li img {
   flex-shrink: 0;
   flex-grow: 0;
   max-width: 80px;
